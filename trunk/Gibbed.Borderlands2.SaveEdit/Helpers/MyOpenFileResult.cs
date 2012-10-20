@@ -125,7 +125,7 @@ namespace Gibbed.Borderlands2.SaveEdit
             {
                 Title = this._Title,
                 Filter = this._Filters.CreateFilterExpression(),
-                InitialDirectory = this._InitialDirectory,
+                //InitialDirectory = this._InitialDirectory,
                 Multiselect = this._AllowMultipleFiles,
                 CheckFileExists = true,
                 CheckPathExists = true,

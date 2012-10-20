@@ -37,15 +37,26 @@
   <DockPanel>
     <ToolBar Name="ButtonBar"
              DockPanel.Dock="Top">
-      <Button>
-        <StackPanel Orientation="Horizontal">
-          <Image Width="16"
-                 Height="16"
-                 Source="Resources\fugue\document.png" />
-          <Label Content="New" />
-        </StackPanel>
-      </Button>
-      <Button x:Name="ReadSave">
+            
+            <Menu Background="#00000000" Width="80" FontStyle="Normal">
+                <MenuItem Height="26" Header="New Save" Margin="0,5,0,0">
+                    <MenuItem Header="PC Save">
+                        <MenuItem x:Name="NewAssassin" Header="New Assassin"/>
+                        <MenuItem x:Name="NewSiren" Header="New Siren"/>
+                        <MenuItem x:Name="NewCommando" Header="New Commando"/>
+                        <MenuItem x:Name="NewGunzerker" Header="New Gunzerker"/>
+                        <MenuItem x:Name="NewMechro" Header="New Mechromancer"/>
+                    </MenuItem>
+                    <MenuItem Header="Xbox Save">
+                        <MenuItem x:Name="NewAssassin360" Header="New Assassin"/>
+                        <MenuItem x:Name="NewSiren360" Header="New Siren"/>
+                        <MenuItem x:Name="NewCommando360" Header="New Commando"/>
+                        <MenuItem x:Name="NewGunzerker360" Header="New Gunzerker"/>
+                        <MenuItem x:Name="NewMechro360" Header="New Mechromancer"/>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+            <Button x:Name="ReadSave">
         <StackPanel Orientation="Horizontal">
           <Image Width="16"
                  Height="16"
@@ -62,7 +73,16 @@
           <Label Content="Save" />
         </StackPanel>
       </Button>
-    </ToolBar>
+            <Button  x:Name="WriteSaveXbox"
+              IsEnabled="{Binding Path=SaveFile, Converter={StaticResource NullToBooleanConverter1}, ConverterParameter=true}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="16"
+                 Height="16"
+                 Source="Resources\fugue\disk-black.png" />
+                    <Label Content="Save for xbox" />
+                </StackPanel>
+            </Button>
+        </ToolBar>
     <TabControl IsEnabled="{Binding Path=SaveFile, Converter={StaticResource NullToBooleanConverter1}, ConverterParameter=true}">
       <TabItem>
         <TabItem.Header>

@@ -118,7 +118,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 DefaultExt = this._Filters.DefaultExtension,
                 Title = this._Title,
                 Filter = this._Filters.CreateFilterExpression(),
-                InitialDirectory = this._InitialDirectory,
+                //InitialDirectory = this._InitialDirectory,
                 OverwritePrompt = this._PromptForOverwrite,
                 CreatePrompt = this._PromptForCreate,
                 AddExtension = true,

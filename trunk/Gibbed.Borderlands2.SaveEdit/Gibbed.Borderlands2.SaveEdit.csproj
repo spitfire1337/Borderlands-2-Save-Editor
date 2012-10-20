@@ -73,6 +73,12 @@
     <Reference Include="WPFToolkit.Extended, Version=1.7.4644.13122, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
       <HintPath>..\packages\Extended.Wpf.Toolkit.1.7.0\lib\net40\WPFToolkit.Extended.dll</HintPath>
     </Reference>
+    <Reference Include="X360">
+      <HintPath>..\..\..\X360.dll</HintPath>
+    </Reference>
+    <Reference Include="xPackage3">
+      <HintPath>..\..\..\xPackage3.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -122,12 +128,12 @@
     </Compile>
     <Compile Include="Helpers\MyComboBox.cs" />
     <Compile Include="Tabs\FastTravelViewModel.cs" />
-    <Compile Include="Tabs\GeneralView.xaml.cs">
-      <DependentUpon>GeneralView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Helpers\PropertyProxy.cs" />
     <Compile Include="ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\GeneralView.xaml.cs">
+      <DependentUpon>GeneralView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Validators\AssetLibrarySetIdValidationRule.cs" />
     <Compile Include="Validators\AssetValidationRule.cs" />
@@ -168,6 +174,17 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Resources\Assassin-360.sav" />
+    <None Include="Resources\Assassin.sav" />
+    <None Include="Resources\Commando-360.sav" />
+    <None Include="Resources\Commando.sav" />
+    <None Include="Resources\Gunzerker-360.sav" />
+    <None Include="Resources\Gunzerker.sav" />
+    <None Include="Resources\KV.bin" />
+    <None Include="Resources\Mechromancer-360.sav" />
+    <None Include="Resources\Mechromancer.sav" />
+    <None Include="Resources\Siren-360.sav" />
+    <None Include="Resources\Siren.sav" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Items\BackpackItemView.xaml">
@@ -202,13 +219,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Tabs\GeneralView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Items\BaseWeaponView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tabs\GeneralView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -297,6 +314,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\red skull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\xbox.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

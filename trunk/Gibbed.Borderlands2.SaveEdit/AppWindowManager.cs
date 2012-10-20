@@ -35,7 +35,7 @@ namespace Gibbed.Borderlands2.SaveEdit
             if (model is ShellViewModel)
             {
                 window.SizeToContent = SizeToContent.Manual;
-                window.Title = "Gibbed's Borderlands 2 Save Editor";
+                window.Title = "Gibbed's Borderlands 2 Save Editor - Modified by SpitFire1337";
                 window.Width = 720;
                 window.Height = 560;
                 window.Icon =
