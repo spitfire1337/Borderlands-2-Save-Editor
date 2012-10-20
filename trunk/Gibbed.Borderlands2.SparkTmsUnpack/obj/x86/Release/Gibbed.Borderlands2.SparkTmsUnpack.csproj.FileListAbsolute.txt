@@ -40,3 +40,24 @@ C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SparkTmsUnpack\obj\x86\Release\Gibbed.Borderlands2.SparkTmsUnpack.csprojResolveAssemblyReference.cache
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SparkTmsUnpack\obj\x86\Release\Gibbed.Borderlands2.SparkTmsUnpack.exe
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SparkTmsUnpack\obj\x86\Release\Gibbed.Borderlands2.SparkTmsUnpack.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\lzo_32.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\lzo_64.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\Gibbed.Borderlands2.SparkTmsUnpack.exe
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\Gibbed.Borderlands2.SparkTmsUnpack.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\Gibbed.Borderlands2.FileFormats.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\Gibbed.IO.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\NDesk.Options.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\Gibbed.Borderlands2.ProtoBufFormats.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\Gibbed.Borderlands2.GameInfo.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\protobuf-net.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\Newtonsoft.Json.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\Gibbed.Borderlands2.FileFormats.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\Gibbed.IO.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\Gibbed.Borderlands2.ProtoBufFormats.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\Gibbed.Borderlands2.GameInfo.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\protobuf-net.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\protobuf-net.xml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\bin\Release\Newtonsoft.Json.xml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\obj\x86\Release\Gibbed.Borderlands2.SparkTmsUnpack.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\obj\x86\Release\Gibbed.Borderlands2.SparkTmsUnpack.exe
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SparkTmsUnpack\obj\x86\Release\Gibbed.Borderlands2.SparkTmsUnpack.pdb

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\
 Gibbed.Borderlands2.SaveEdit
 none
 false
 TRACE
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\App.xaml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\App.xaml
 10-1847072358
 
 46-1484628479
-251478359101
+26-751502711
 Items\BackpackItemView.xaml;AccessiblePropertyGrid.xaml;Tabs\BackpackView.xaml;Items\BackpackWeaponView.xaml;Tabs\BankView.xaml;Tabs\CurrencyOnHandView.xaml;Items\BaseItemView.xaml;ShellView.xaml;Items\BaseWeaponView.xaml;Tabs\GeneralView.xaml;
 
-False
+True
 

@@ -30,13 +30,14 @@ using Caliburn.Micro.Contrib;
 using Caliburn.Micro.Contrib.Results;
 using WillowTwoSave = Gibbed.Borderlands2.ProtoBufFormats.WillowTwoSave;
 using Gibbed.IO;
-using xPackage3;
+//using xPackage3;
 using X360;
 using X360.IO;
 using X360.Other;
 using X360.Profile;
 using X360.STFS;
 using System.Linq;
+
 
 
 namespace Gibbed.Borderlands2.SaveEdit
@@ -159,26 +160,54 @@ namespace Gibbed.Borderlands2.SaveEdit
             {
                 yield break;
             }
+
+            ///////////////////////////////////////////
+            //SPITFIRE1337 MODS
+            ///////////////////////////////////////////
+
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             //using (FileStream fs = File.Create(path)) { }
+            File.Delete(path + "/mytempsave.sav");
+            File.Delete(path + "/savegame.sav");
+            File.Copy(fileName, path + "/mytempsave.sav");
+            string profileid = "";
+            string deviceid = "";
+            string consoleid = "";
+
+
             Stream input1 = new FileStream(fileName, FileMode.Open);
 
             // Ensure that the target does not exist.
-            File.Delete(path + "/savegame.sav");
-
+            
+            
 
             //Stream input = new Stream(fs);
             var check = input1.ReadValueU32(Endian.Big);
 
             input1.Close();
+
             if (check == 0x434F4E20)
             {
                 //MessageBox.Show("This is a xbox save");
 
+                yield return new DelegateResult(() =>
+                {
+                    DJsIO io = new DJsIO(fileName, DJFileMode.Open, true);
+
+                    io.Position = 0x371;
+                    profileid = io.ReadHexString(8); //Profile ID
+                    io.Close();
+                })
+    .Rescue().Execute(
+        x =>
+        new MyMessageBox("An exception was thrown (press Ctrl+C to copy):\n\n" + x.ToString(),
+                         "Error")
+            .WithIcon(MessageBoxImage.Error).AsCoroutine());
+
+
                 STFSPackage xPackage = new STFSPackage(fileName, null);
-
                 FileEntry xent = (FileEntry)xPackage.GetFile("savegame.sav");
-
+                
                 if (!xent.Extract(path + "/savegame.sav"))
                 {
                     //MessageBoxEx.Show("Extraction Failed!", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.[Error])
@@ -189,6 +218,8 @@ namespace Gibbed.Borderlands2.SaveEdit
                 }
                 else
                 {
+                    
+
                     fileName = path + "/savegame.sav";
                     //MessageBox.Show("File extracted");
                     //Thread.Sleep(2000);
@@ -198,8 +229,11 @@ namespace Gibbed.Borderlands2.SaveEdit
             }
             else
             {
-                //MessageBox.Show("This is a pc save");
+                profileid = "0";
+                deviceid = "0";
+                consoleid = "0";
             }
+
             yield return new DelegateResult(() =>
             {
                 FileFormats.SaveFile saveFile;
@@ -209,7 +243,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 }
 
                 this.SaveFile = saveFile;
-                this.General.ImportData(saveFile.SaveGame, saveFile.Endian);
+                this.General.ImportData(saveFile.SaveGame, saveFile.Endian,profileid,deviceid,consoleid);
                 this.CurrencyOnHand.ImportData(saveFile.SaveGame);
                 this.Backpack.ImportData(saveFile.SaveGame);
                 this.Bank.ImportData(saveFile.SaveGame);
@@ -228,6 +262,9 @@ namespace Gibbed.Borderlands2.SaveEdit
                     new MyMessageBox("An exception was thrown (press Ctrl+C to copy):\n\n" + x.ToString(),
                                      "Error")
                         .WithIcon(MessageBoxImage.Error).AsCoroutine());
+            ///////////////////////////////////////////
+            //END SPITFIRE1337 MODS
+            ///////////////////////////////////////////
         }
 
         public IEnumerable<IResult> WriteSave()
@@ -282,16 +319,20 @@ namespace Gibbed.Borderlands2.SaveEdit
                 new MyMessageBox("An exception was thrown (press Ctrl+C to copy):\n\n" + x.ToString(), "Error")
                     .WithIcon(MessageBoxImage.Error).AsCoroutine());
         }
+        ///////////////////////////////////////////
+        //SPITFIRE1337 MODS
+        ///////////////////////////////////////////
         public IEnumerable<IResult> WriteSaveXbox()
         {
             if (this.SaveFile == null)
             {
                 yield break;
             }
+
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             File.Delete(path + "/savegame.sav");
 
-            MessageBox.Show("A save file box will now appear, please select a EXISTING XBOX SAVE to overwrite. I can not emphasize this enough, ALWAYS KEEP A WORKING BACKUP. Once you have a backup press ok to continue");
+            //MessageBox.Show("A save file box will now appear, please select a EXISTING XBOX SAVE to overwrite. I can not emphasize this enough, ALWAYS KEEP A WORKING BACKUP. Once you have a backup press ok to continue");
 
             var saveFile = this.SaveFile;
 
@@ -302,6 +343,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 this.CurrencyOnHand.ExportData(saveFile.SaveGame);
                 this.Backpack.ExportData(saveFile.SaveGame);
                 this.Bank.ExportData(saveFile.SaveGame);
+                
 
                 using (var output = File.Create(path + "/savegame.sav"))
                 {
@@ -337,13 +379,39 @@ namespace Gibbed.Borderlands2.SaveEdit
             {
                 yield break;
             }
+            if (File.Exists(fileName))
+            {
 
+                File.WriteAllBytes(fileName, Properties.Resources.Save0001);
+            }
+            else
+            {
+                File.Delete(fileName);
+                File.WriteAllBytes(fileName, Properties.Resources.Save0001);
+            }
+            yield return new DelegateResult(() =>
+            {
+            
+            
+            string profileid = this.General.Profileid;
+            DJsIO io = new DJsIO(fileName, DJFileMode.Open, true);
+
+            io.Position = 0x371;
+            io.WriteHexString(profileid);
+            io.Close();
+            }).Rescue().Execute(
+                x =>
+                new MyMessageBox("An exception was thrown (press Ctrl+C to copy this text):\n\n" + x.ToString(), "Error")
+                    .WithIcon(MessageBoxImage.Error).AsCoroutine());
             yield return new DelegateResult(() =>
             {
 
-                STFSPackage xPackage = new STFSPackage(fileName, null);
-                FileEntry xent = (FileEntry)xPackage.GetFile("savegame.sav");
-                if (!xent.Replace(path + "\\savegame.sav"))
+                STFSPackage stfs = new STFSPackage(fileName, null);
+                FileEntry item = stfs.GetFile("savegame.sav"); //Get's the account file
+
+
+                
+                if (!item.Replace(path + "\\savegame.sav"))
                 {
                     //If Not xent.Extract(Application.StartupPath + "\" + "savegame.sav") Then
                     //MessageBoxEx.Show("Extraction Failed!", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.[Error])
@@ -352,7 +420,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 }
                 else
                 {
-
+                    //MessageBox.Show("File Inserted");
 
                     //If Not  Then
 
@@ -363,17 +431,12 @@ namespace Gibbed.Borderlands2.SaveEdit
                 {
                     File.WriteAllBytes(path + "/kv.bin", Properties.Resources.KV);
                 }
+                
 
 
-                xPackage.FlushPackage(new RSAParams(path + "/kv.bin"));
-                xPackage.CloseIO();
-                //var stfs as new STFSPackage
-                /*
-                this._Events.Publish(new SavePackMessage(this.SaveFile));
-                using (var output = File.Create(fileName))
-                {
-                    this.SaveFile.Serialize(output);
-                }*/
+                stfs.FlushPackage(new RSAParams(path + "/kv.bin"));
+                stfs.CloseIO();
+
             }).Rescue().Execute(
                 x =>
                 new MyMessageBox("An exception was thrown (press Ctrl+C to copy this text):\n\n" + x.ToString(), "Error")
@@ -384,6 +447,9 @@ namespace Gibbed.Borderlands2.SaveEdit
         {
 
             string fileName = null;
+            string profileid = "0";
+            string deviceid = "0";
+            string consoleid = "0";
 
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
@@ -405,7 +471,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 }
 
                 this.SaveFile = saveFile;
-                this.General.ImportData(saveFile.SaveGame, saveFile.Endian);
+                this.General.ImportData(saveFile.SaveGame, saveFile.Endian, profileid, deviceid, consoleid);
                 this.CurrencyOnHand.ImportData(saveFile.SaveGame);
                 this.Backpack.ImportData(saveFile.SaveGame);
                 this.Bank.ImportData(saveFile.SaveGame);
@@ -427,7 +493,9 @@ namespace Gibbed.Borderlands2.SaveEdit
         }
         public IEnumerable<IResult> NewSiren()
         {
-
+            string profileid = "0";
+            string deviceid = "0";
+            string consoleid = "0";
             string fileName = null;
 
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -450,7 +518,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 }
 
                 this.SaveFile = saveFile;
-                this.General.ImportData(saveFile.SaveGame, saveFile.Endian);
+                this.General.ImportData(saveFile.SaveGame, saveFile.Endian, profileid, deviceid, consoleid);
                 this.CurrencyOnHand.ImportData(saveFile.SaveGame);
                 this.Backpack.ImportData(saveFile.SaveGame);
                 this.Bank.ImportData(saveFile.SaveGame);
@@ -474,7 +542,9 @@ namespace Gibbed.Borderlands2.SaveEdit
         {
 
             string fileName = null;
-
+            string profileid = "0";
+            string deviceid = "0";
+            string consoleid = "0";
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
             File.Delete(path + "/savegame.sav");
@@ -495,7 +565,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 }
 
                 this.SaveFile = saveFile;
-                this.General.ImportData(saveFile.SaveGame, saveFile.Endian);
+                this.General.ImportData(saveFile.SaveGame, saveFile.Endian, profileid, deviceid, consoleid);
                 this.CurrencyOnHand.ImportData(saveFile.SaveGame);
                 this.Backpack.ImportData(saveFile.SaveGame);
                 this.Bank.ImportData(saveFile.SaveGame);
@@ -519,7 +589,9 @@ namespace Gibbed.Borderlands2.SaveEdit
         {
 
             string fileName = null;
-
+            string profileid = "0";
+            string deviceid = "0";
+            string consoleid = "0";
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
             File.Delete(path + "/savegame.sav");
@@ -540,7 +612,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 }
 
                 this.SaveFile = saveFile;
-                this.General.ImportData(saveFile.SaveGame, saveFile.Endian);
+                this.General.ImportData(saveFile.SaveGame, saveFile.Endian, profileid, deviceid, consoleid);
                 this.CurrencyOnHand.ImportData(saveFile.SaveGame);
                 this.Backpack.ImportData(saveFile.SaveGame);
                 this.Bank.ImportData(saveFile.SaveGame);
@@ -564,7 +636,9 @@ namespace Gibbed.Borderlands2.SaveEdit
         {
 
             string fileName = null;
-
+            string profileid = "0";
+            string deviceid = "0";
+            string consoleid = "0";
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
             File.Delete(path + "/savegame.sav");
@@ -585,7 +659,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 }
 
                 this.SaveFile = saveFile;
-                this.General.ImportData(saveFile.SaveGame, saveFile.Endian);
+                this.General.ImportData(saveFile.SaveGame, saveFile.Endian, profileid, deviceid, consoleid);
                 this.CurrencyOnHand.ImportData(saveFile.SaveGame);
                 this.Backpack.ImportData(saveFile.SaveGame);
                 this.Bank.ImportData(saveFile.SaveGame);
@@ -610,7 +684,9 @@ namespace Gibbed.Borderlands2.SaveEdit
         {
 
             string fileName = null;
-
+            string profileid = "0";
+            string deviceid = "0";
+            string consoleid = "0";
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
             File.Delete(path + "/savegame.sav");
@@ -631,7 +707,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 }
 
                 this.SaveFile = saveFile;
-                this.General.ImportData(saveFile.SaveGame, saveFile.Endian);
+                this.General.ImportData(saveFile.SaveGame, saveFile.Endian, profileid, deviceid, consoleid);
                 this.CurrencyOnHand.ImportData(saveFile.SaveGame);
                 this.Backpack.ImportData(saveFile.SaveGame);
                 this.Bank.ImportData(saveFile.SaveGame);
@@ -655,7 +731,9 @@ namespace Gibbed.Borderlands2.SaveEdit
         {
 
             string fileName = null;
-
+            string profileid = "0";
+            string deviceid = "0";
+            string consoleid = "0";
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
             File.Delete(path + "/savegame.sav");
@@ -676,7 +754,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 }
 
                 this.SaveFile = saveFile;
-                this.General.ImportData(saveFile.SaveGame, saveFile.Endian);
+                this.General.ImportData(saveFile.SaveGame, saveFile.Endian, profileid, deviceid, consoleid);
                 this.CurrencyOnHand.ImportData(saveFile.SaveGame);
                 this.Backpack.ImportData(saveFile.SaveGame);
                 this.Bank.ImportData(saveFile.SaveGame);
@@ -700,7 +778,9 @@ namespace Gibbed.Borderlands2.SaveEdit
         {
 
             string fileName = null;
-
+            string profileid = "0";
+            string deviceid = "0";
+            string consoleid = "0";
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
             File.Delete(path + "/savegame.sav");
@@ -721,7 +801,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 }
 
                 this.SaveFile = saveFile;
-                this.General.ImportData(saveFile.SaveGame, saveFile.Endian);
+                this.General.ImportData(saveFile.SaveGame, saveFile.Endian, profileid, deviceid, consoleid);
                 this.CurrencyOnHand.ImportData(saveFile.SaveGame);
                 this.Backpack.ImportData(saveFile.SaveGame);
                 this.Bank.ImportData(saveFile.SaveGame);
@@ -745,7 +825,9 @@ namespace Gibbed.Borderlands2.SaveEdit
         {
 
             string fileName = null;
-
+            string profileid = "0";
+            string deviceid = "0";
+            string consoleid = "0";
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
             File.Delete(path + "/savegame.sav");
@@ -766,7 +848,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 }
 
                 this.SaveFile = saveFile;
-                this.General.ImportData(saveFile.SaveGame, saveFile.Endian);
+                this.General.ImportData(saveFile.SaveGame, saveFile.Endian, profileid, deviceid, consoleid);
                 this.CurrencyOnHand.ImportData(saveFile.SaveGame);
                 this.Backpack.ImportData(saveFile.SaveGame);
                 this.Bank.ImportData(saveFile.SaveGame);
@@ -790,7 +872,9 @@ namespace Gibbed.Borderlands2.SaveEdit
         {
 
             string fileName = null;
-
+            string profileid = "0";
+            string deviceid = "0";
+            string consoleid = "0";
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
             File.Delete(path + "/savegame.sav");
@@ -811,7 +895,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 }
 
                 this.SaveFile = saveFile;
-                this.General.ImportData(saveFile.SaveGame, saveFile.Endian);
+                this.General.ImportData(saveFile.SaveGame, saveFile.Endian, profileid, deviceid, consoleid);
                 this.CurrencyOnHand.ImportData(saveFile.SaveGame);
                 this.Backpack.ImportData(saveFile.SaveGame);
                 this.Bank.ImportData(saveFile.SaveGame);
@@ -831,5 +915,31 @@ namespace Gibbed.Borderlands2.SaveEdit
                                      "Error")
                         .WithIcon(MessageBoxImage.Error).AsCoroutine());
         }
+
+        public long Convert2Long(String Str1)
+        {
+
+            try
+            {
+
+                long LngString = Int64.Parse(Str1);
+
+                return LngString;
+
+            }
+
+            catch (System.FormatException)
+            {
+
+                MessageBox.Show("Parameter is not in required format");
+
+                return -1;
+
+            }
+
+        }
+        ///////////////////////////////////////////
+        //END SPITFIRE1337 MODS
+        ///////////////////////////////////////////
     }
 }

@@ -219,5 +219,66 @@
         </ComboBox>
       </Grid>
     </Expander>
-  </StackPanel>
+      <!--SPITFIRE1337 MODS-->
+        <Expander Header="Xbox 360 Rehash/Resigner"
+              IsExpanded="True" Height="134">
+            <Grid Height="88">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="0*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.50*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0"
+               Grid.Column="0"
+               HorizontalContentAlignment="Right"
+               Content="Profile ID:" />
+                <TextBox Name="myprofileid" Grid.Row="0"
+                 Grid.Column="1"
+                 Margin="3"
+                 Text="{Binding Path=Profileid, UpdateSourceTrigger=PropertyChanged}" />
+                <Button Grid.Row="0" Grid.Column="0"  FlowDirection="RightToLeft" Margin="0,0,115,0" x:Name="importfromprofile">
+                    <Label Content="Import from profile"/>
+                </Button>
+                <Label Grid.Row="1"
+               Grid.Column="0"
+               HorizontalContentAlignment="Right"
+               Content="Profile Name:" />
+                <Label Grid.Row="2"
+               Grid.Column="0"
+               HorizontalContentAlignment="Right"
+               Content="Saved ID's:" />
+                <Button Grid.Row="1" Grid.Column="0" Margin="0,0,115,0" x:Name="saveprofiles">
+                    <Label Content="Save Id Sets"/>
+                </Button>
+                <TextBox Name="myprofilename" Grid.Row="1"
+                 Grid.Column="1"
+                 Margin="3"
+                 Text="{Binding Path=ProfileName, UpdateSourceTrigger=PropertyChanged}" />
+                <ComboBox Grid.Row="2" Grid.Column="1" Margin="3" Name="myprofiles" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <ComboBox.GroupStyle>
+                        <GroupStyle>
+                            <GroupStyle.HeaderTemplate>
+                                <DataTemplate>
+                                    <TextBlock FontSize="15"
+                             FontWeight="Bold"
+                             Text="{Binding Path=Name}" />
+                                </DataTemplate>
+                            </GroupStyle.HeaderTemplate>
+                        </GroupStyle>
+                    </ComboBox.GroupStyle>
+                </ComboBox>
+            </Grid>
+        </Expander>
+      <!--END SPITFIRE1337 MODS-->
+    </StackPanel>
 </UserControl>

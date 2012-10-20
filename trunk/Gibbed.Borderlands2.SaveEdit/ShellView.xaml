@@ -186,6 +186,7 @@
           </xctk:PropertyGrid.EditorDefinitions>
         </xctk:PropertyGrid>
       </TabItem>
-    </TabControl>
+            
+        </TabControl>
   </DockPanel>
 </UserControl>

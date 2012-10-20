@@ -145,6 +145,9 @@
   <data name="Mechromancer_360" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mechromancer-360.sav;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Save0001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save0001.sav;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Siren" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Siren.sav;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

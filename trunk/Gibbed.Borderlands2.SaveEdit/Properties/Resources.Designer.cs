@@ -153,6 +153,16 @@ namespace Gibbed.Borderlands2.SaveEdit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Save0001 {
+            get {
+                object obj = ResourceManager.GetObject("Save0001", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Siren {
             get {
                 object obj = ResourceManager.GetObject("Siren", resourceCulture);

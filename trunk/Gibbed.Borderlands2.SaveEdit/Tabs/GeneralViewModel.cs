@@ -29,6 +29,16 @@ using Caliburn.Micro;
 using Gibbed.Borderlands2.GameInfo;
 using Gibbed.Borderlands2.ProtoBufFormats.WillowTwoSave;
 using Gibbed.IO;
+using System.IO;
+using System;
+using System.Windows.Forms;
+using Caliburn.Micro.Contrib.Results;
+using X360;
+using X360.IO;
+using X360.Other;
+using X360.Profile;
+using X360.STFS;
+using System.Xml;
 
 namespace Gibbed.Borderlands2.SaveEdit
 {
@@ -46,6 +56,16 @@ namespace Gibbed.Borderlands2.SaveEdit
         private string _CharacterName = "Zer0";
         private string _SelectedHead;
         private string _SelectedSkin;
+        ///////////////////////////////////////////
+        //SPITFIRE1337 MODS
+        ///////////////////////////////////////////
+        private string _Profileid;
+        private string _ProfileName;
+        
+
+        ///////////////////////////////////////////
+        //END SPITFIRE1337 MODS
+        ///////////////////////////////////////////
         #endregion
 
         #region Properties
@@ -160,6 +180,33 @@ namespace Gibbed.Borderlands2.SaveEdit
         public ObservableCollection<AssetDisplay> PlayerClasses { get; private set; }
         public ObservableCollection<AssetDisplay> HeadAssets { get; private set; }
         public ObservableCollection<AssetDisplay> SkinAssets { get; private set; }
+       // public ObservableCollection<AssetDisplay> myprofiles { get; private set; }
+
+        ///////////////////////////////////////////
+        //SPITFIRE1337 MODS
+        ///////////////////////////////////////////
+
+        public string Profileid
+        {
+            get { return this._Profileid; }
+            set
+            {
+                this._Profileid = value;
+                this.NotifyOfPropertyChange(() => this.Profileid);
+            }
+        }
+        public string ProfileName
+        {
+            get { return this._ProfileName; }
+            set
+            {
+                this._ProfileName = value;
+                this.NotifyOfPropertyChange(() => this.ProfileName);
+            }
+        }
+        ///////////////////////////////////////////
+        //END SPITFIRE1337 MODS
+        ///////////////////////////////////////////
         #endregion
 
         internal class EndianDisplay
@@ -193,6 +240,7 @@ namespace Gibbed.Borderlands2.SaveEdit
         [ImportingConstructor]
         public GeneralViewModel()
         {
+           
             this.Endians = new ObservableCollection<EndianDisplay>
             {
                 new EndianDisplay("Little (PC)", Endian.Little),
@@ -314,8 +362,10 @@ namespace Gibbed.Borderlands2.SaveEdit
             skinAssets.ForEach(a => this.SkinAssets.Add(a));
             this.SelectedSkin = selectedSkin;
         }
-
-        public void ImportData(WillowTwoPlayerSaveGame saveGame, Endian endian)
+        ///////////////////////////////////////////
+        //SPITFIRE1337 MODS
+        ///////////////////////////////////////////
+        public void ImportData(WillowTwoPlayerSaveGame saveGame, Endian endian, string myprofileid, string mydeviceid, string myconsoleid)
         {
             this.Endian = endian;
             this.SaveGameId = saveGame.SaveGameId;
@@ -328,8 +378,207 @@ namespace Gibbed.Borderlands2.SaveEdit
             this.SelectedHead = saveGame.AppliedCustomizations[0];
             this.SelectedSkin = saveGame.AppliedCustomizations[4];
             this.BuildCustomizationAssets();
+            
+            string vOut = myprofileid.ToString();
+            this.Profileid = vOut;
+            this.ProfileName = checkProfile(myprofileid);
         }
+        public string checkProfile(string myid)
+        {
+            string name = "Unknown";
+            string id = "";
+            bool exists = false;
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            if (File.Exists(path + "/profiles.xml"))
+            {
+                XmlTextReader reader = new XmlTextReader(path + "/profiles.xml");
+                //doc.Load("C:/XKey Desktop/data.xml");
+                // Read until end of file
 
+                while (reader.Read())
+                {
+                    if (reader.NodeType == XmlNodeType.Element && reader.Name == "profile")
+                    {
+                        while (reader.NodeType != XmlNodeType.EndElement)
+                        {
+                            reader.Read();
+
+                            if (reader.Name == "name")
+                            {
+                                while (reader.NodeType != XmlNodeType.EndElement)
+                                {
+                                    reader.Read();
+                                    if (reader.NodeType == XmlNodeType.Text)
+                                    {
+                                        name = reader.Value;
+                                       
+                                    }
+                                }
+                                reader.Read();
+                            }
+                            if (reader.Name == "id")
+                            {
+                                while (reader.NodeType != XmlNodeType.EndElement)
+                                {
+                                    reader.Read();
+                                    if (reader.NodeType == XmlNodeType.Text)
+                                    {
+                                        //MessageBox.Show(reader.Value);
+                                        id = reader.Value;
+                                        if (id == myid)
+                                        {
+                                            exists = true;
+                                            return name;
+                                        }
+                                    }
+                                }
+                                reader.Read();
+                            } //end if
+
+                        }
+                    }
+
+                }
+                reader.Close();
+            }
+            return "Unknown";
+        }
+        public void importfromprofile()
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "Open a xbox 360 profile";
+            dialog.Filter = "Xbox 360 profile|*.*";
+            DialogResult result = dialog.ShowDialog();
+            if (result == DialogResult.OK) // Test result.
+            {
+
+                try
+                {
+                    DJsIO io = new DJsIO(dialog.FileName, DJFileMode.Open, true);
+
+                   
+                    io.Position = 0x371;
+                    this.Profileid = io.ReadHexString(8);
+                    io.Close();
+
+                    //xPackage3.STFS.Package sts = new xPackage3.STFS.Package(dialog.FileName);
+                    
+                    STFSPackage stfs = new STFSPackage(dialog.FileName, null);
+                    ProfilePackage xFile = new ProfilePackage(ref stfs);
+                    string gamertag = xFile.UserFile.GetGamertag();
+                    this.ProfileName = gamertag; 
+                    xFile.CloseIO();
+                    stfs.CloseIO();
+                    //this.Profileid = stfs.Header.Title_Package;
+                }
+                catch (Exception e) {  }
+            }
+        }
+        
+        public void saveprofiles()
+        {
+
+            string name;
+            string id;
+            bool exists = false;
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            if (File.Exists(path + "/profiles.xml"))
+            {
+                XmlTextReader reader = new XmlTextReader(path + "/profiles.xml");
+                //doc.Load("C:/XKey Desktop/data.xml");
+                // Read until end of file
+
+                while (reader.Read())
+                {
+                    if (reader.NodeType == XmlNodeType.Element && reader.Name == "profile")
+                    {
+                        while (reader.NodeType != XmlNodeType.EndElement)
+                        {
+                            reader.Read();
+
+                            if (reader.Name == "name")
+                            {
+                                while (reader.NodeType != XmlNodeType.EndElement)
+                                {
+                                    reader.Read();
+                                    if (reader.NodeType == XmlNodeType.Text)
+                                    {
+                                        name = reader.Value;
+                                        if (name == this.ProfileName)
+                                        {
+                                            exists = true;
+                                        }
+                                    }
+                                }
+                                reader.Read();
+                            }
+                            if (reader.Name == "id")
+                            {
+                                while (reader.NodeType != XmlNodeType.EndElement)
+                                {
+                                    reader.Read();
+                                    if (reader.NodeType == XmlNodeType.Text)
+                                    {
+                                        //MessageBox.Show(reader.Value);
+                                        id = reader.Value;
+                                    }
+                                }
+                                reader.Read();
+                            } //end if
+
+                        }
+                    }
+
+                }
+                reader.Close();
+            }
+            if (exists == false)
+            {
+                try
+                {
+                    if (!File.Exists(path + "/profiles.xml"))
+                    {
+                        XmlTextWriter textWriter = new XmlTextWriter(path + "/profiles.xml", null);
+                        textWriter.WriteStartDocument();
+                        textWriter.WriteStartElement("root");
+                        textWriter.WriteStartElement("profile");
+                        textWriter.WriteStartElement("name");
+                        textWriter.WriteString(this.ProfileName);
+                        textWriter.WriteEndElement();
+                        textWriter.WriteStartElement("id");
+                        textWriter.WriteString(this.Profileid);
+                        textWriter.WriteEndElement();
+                        textWriter.WriteEndElement();
+                        textWriter.WriteEndDocument();
+                        textWriter.Close();
+                    }
+                    else
+                    {
+                        string xml = @"<log> <Game_1> <player>Name</player> <outcome>Won </outcome> </Game_1> </log>";
+                        XmlDocument doc = new XmlDocument();
+                        doc.Load(path + "/profiles.xml");
+                        XmlElement gameElement = doc.CreateElement("profile");
+                        XmlElement playerElement = doc.CreateElement("name");
+                        playerElement.InnerXml = this.ProfileName;
+                        XmlElement outComeElement = doc.CreateElement("id");
+                        outComeElement.InnerXml = this.Profileid;
+                        gameElement.AppendChild(playerElement);
+                        gameElement.AppendChild(outComeElement);
+                        XmlNode node = doc.SelectSingleNode("//root");
+                        node.AppendChild(gameElement);
+                        doc.Save(path + "/profiles.xml");
+                        
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+            }
+        }
+        ///////////////////////////////////////////
+        //END SPITFIRE1337 MODS
+        ///////////////////////////////////////////
         public void ExportData(WillowTwoPlayerSaveGame saveGame, out Endian endian)
         {
             endian = this.Endian;
