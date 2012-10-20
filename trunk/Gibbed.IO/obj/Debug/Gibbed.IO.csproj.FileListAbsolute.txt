@@ -1,0 +1,4 @@
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.IO\bin\Debug\Gibbed.IO.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.IO\bin\Debug\Gibbed.IO.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.IO\obj\Debug\Gibbed.IO.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.IO\obj\Debug\Gibbed.IO.pdb

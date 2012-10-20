@@ -1,0 +1,7 @@
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\bin_test\lzo_32.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\bin_test\lzo_64.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\bin_test\VerifySaves.exe
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\bin_test\VerifySaves.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\VerifySaves\obj\x86\Debug\VerifySaves.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\VerifySaves\obj\x86\Debug\VerifySaves.exe
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\VerifySaves\obj\x86\Debug\VerifySaves.pdb

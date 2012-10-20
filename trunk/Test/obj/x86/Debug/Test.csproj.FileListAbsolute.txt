@@ -1,0 +1,7 @@
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Test\obj\x86\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\bin_test\lzo_32.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\bin_test\lzo_64.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\bin_test\Test.exe
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\bin_test\Test.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Test\obj\x86\Debug\Test.exe
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Test\obj\x86\Debug\Test.pdb

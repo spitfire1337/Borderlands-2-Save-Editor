@@ -1,0 +1,5 @@
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\NDesk.Options\bin\Debug\NDesk.Options.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\NDesk.Options\bin\Debug\NDesk.Options.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\NDesk.Options\obj\Debug\NDesk.Options.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\NDesk.Options\obj\Debug\NDesk.Options.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\NDesk.Options\obj\Debug\NDesk.Options.pdb

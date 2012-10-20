@@ -1,0 +1,7 @@
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\bin\lzo_32.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\bin\lzo_64.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\bin\Gibbed.Borderlands2.SparkTmsUnpack.exe
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\bin\Gibbed.Borderlands2.SparkTmsUnpack.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.SparkTmsUnpack\obj\x86\Debug\Gibbed.Borderlands2.SparkTmsUnpack.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.SparkTmsUnpack\obj\x86\Debug\Gibbed.Borderlands2.SparkTmsUnpack.exe
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.SparkTmsUnpack\obj\x86\Debug\Gibbed.Borderlands2.SparkTmsUnpack.pdb

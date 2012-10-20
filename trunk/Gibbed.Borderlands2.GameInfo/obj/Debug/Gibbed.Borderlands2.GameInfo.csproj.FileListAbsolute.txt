@@ -1,0 +1,7 @@
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.GameInfo\bin\Debug\Gibbed.Borderlands2.GameInfo.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.GameInfo\bin\Debug\Gibbed.Borderlands2.GameInfo.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.GameInfo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.GameInfo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.GameInfo\obj\Debug\Gibbed.Borderlands2.GameInfo.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.GameInfo\obj\Debug\Gibbed.Borderlands2.GameInfo.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.GameInfo\obj\Debug\Gibbed.Borderlands2.GameInfo.pdb
