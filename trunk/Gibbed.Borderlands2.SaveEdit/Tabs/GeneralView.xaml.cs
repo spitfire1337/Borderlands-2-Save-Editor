@@ -46,59 +46,62 @@ namespace Gibbed.Borderlands2.SaveEdit
         {
             this.InitializeComponent();
             loadprofiles();
-            this.myprofiles.SelectionChanged +=myprofiles_SelectedIndexChanged;
+            this.myprofiles.SelectionChanged += myprofiles_SelectedIndexChanged;
         }
         public void loadprofiles()
         {
-            string name = "";
-          
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            XmlTextReader reader = new XmlTextReader(path + "/profiles.xml");
-            //doc.Load("C:/XKey Desktop/data.xml");
-            // Read until end of file
-           
-
-            while (reader.Read())
+            try
             {
-                if (reader.NodeType == XmlNodeType.Element && reader.Name == "profile")
+                string name = "";
+
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                XmlTextReader reader = new XmlTextReader(path + "/profiles.xml");
+                //doc.Load("C:/XKey Desktop/data.xml");
+                // Read until end of file
+
+
+                while (reader.Read())
                 {
-                    while (reader.NodeType != XmlNodeType.EndElement)
+                    if (reader.NodeType == XmlNodeType.Element && reader.Name == "profile")
                     {
-                        reader.Read();
-
-                        if (reader.Name == "name")
+                        while (reader.NodeType != XmlNodeType.EndElement)
                         {
-                            while (reader.NodeType != XmlNodeType.EndElement)
-                            {
-                                reader.Read();
-                                if (reader.NodeType == XmlNodeType.Text)
-                                {
-                                    name = reader.Value;
-                                    myprofiles.Items.Add(reader.Value);
-                                    //MessageBox.Show(reader.Value);
-                                }
-                            }
                             reader.Read();
-                        }
-                       //end if
 
+                            if (reader.Name == "name")
+                            {
+                                while (reader.NodeType != XmlNodeType.EndElement)
+                                {
+                                    reader.Read();
+                                    if (reader.NodeType == XmlNodeType.Text)
+                                    {
+                                        name = reader.Value;
+                                        myprofiles.Items.Add(reader.Value);
+                                        //MessageBox.Show(reader.Value);
+                                    }
+                                }
+                                reader.Read();
+                            }
+                            //end if
+
+                        }
+
+                        //this.myprofiles = new ObservableCollection<AssetDisplay>(name);
+
+                        //comboBoxName.DisplayMemberPath = ds.Tables[0].Columns["ZoneName"].ToString();
+                        //comboBoxName.SelectedValuePath = ds.Tables[0].Columns["ZoneId"].ToString(); 
                     }
 
-                    //this.myprofiles = new ObservableCollection<AssetDisplay>(name);
-                    
-                    //comboBoxName.DisplayMemberPath = ds.Tables[0].Columns["ZoneName"].ToString();
-                    //comboBoxName.SelectedValuePath = ds.Tables[0].Columns["ZoneId"].ToString(); 
                 }
-
             }
-            
+            catch { }
         }
         private void myprofiles_SelectedIndexChanged(object sender,
         System.EventArgs e)
         {
             try
             {
-              
+
 
                 // Save the selected employee's name, because we will remove 
                 // the employee's name from the list. 

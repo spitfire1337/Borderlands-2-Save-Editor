@@ -52,119 +52,66 @@ C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbe
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.csproj.GenerateResource.Cache
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.exe
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\lzo_32.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\lzo_64.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.SaveEdit.exe.config
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.SaveEdit.exe
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.SaveEdit.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.Contrib.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.FileFormats.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.GameInfo.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.ProtoBufFormats.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.IO.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\System.Windows.Interactivity.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\WPFToolkit.Extended.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\protobuf-net.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Newtonsoft.Json.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.FileFormats.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.GameInfo.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.ProtoBufFormats.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.IO.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.xml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.Contrib.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\System.Windows.Interactivity.xml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\protobuf-net.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\protobuf-net.xml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Newtonsoft.Json.xml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.csprojResolveAssemblyReference.cache
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\AccessiblePropertyGrid.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\BackpackView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\BankView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\CurrencyOnHandView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BackpackItemView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\BackpackView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BackpackWeaponView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\BankView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\CurrencyOnHandView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BaseItemView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\ShellView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\GeneralView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BaseWeaponView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\App.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\GeneratedInternalTypeHelper.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit_MarkupCompile.cache
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit_MarkupCompile.lref
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\App.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BackpackItemView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BackpackWeaponView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BaseItemView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\ShellView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\GeneralView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BaseWeaponView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.g.resources
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.Properties.Resources.resources
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.csproj.GenerateResource.Cache
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.exe
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\X360.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\xPackage3.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\lzo_32.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\lzo_64.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.SaveEdit.exe.config
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.SaveEdit.exe
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.SaveEdit.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.Contrib.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.FileFormats.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.GameInfo.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.ProtoBufFormats.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.IO.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\System.Windows.Interactivity.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\WPFToolkit.Extended.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\X360.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\xPackage3.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\protobuf-net.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Newtonsoft.Json.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.FileFormats.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.GameInfo.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.ProtoBufFormats.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.IO.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.xml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.Contrib.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\System.Windows.Interactivity.xml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\protobuf-net.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\protobuf-net.xml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Newtonsoft.Json.xml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.csprojResolveAssemblyReference.cache
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\AccessiblePropertyGrid.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\BackpackView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\BankView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\CurrencyOnHandView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BackpackItemView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\BackpackView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BackpackWeaponView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\BankView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\CurrencyOnHandView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BaseItemView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\ShellView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BaseWeaponView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\GeneralView.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\App.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\GeneratedInternalTypeHelper.g.cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit_MarkupCompile.cache
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit_MarkupCompile.lref
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\App.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BackpackItemView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BackpackWeaponView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BaseItemView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\ShellView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BaseWeaponView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\GeneralView.baml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.g.resources
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.Properties.Resources.resources
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.csproj.GenerateResource.Cache
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.exe
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\lzo_32.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\lzo_64.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.SaveEdit.exe.config
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.SaveEdit.exe
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.SaveEdit.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.Contrib.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.FileFormats.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.GameInfo.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.ProtoBufFormats.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.IO.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\System.Windows.Interactivity.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\WPFToolkit.Extended.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\X360.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\xPackage3.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\protobuf-net.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Newtonsoft.Json.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.FileFormats.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.GameInfo.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.ProtoBufFormats.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.IO.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.xml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Caliburn.Micro.Contrib.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\System.Windows.Interactivity.xml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\protobuf-net.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\protobuf-net.xml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Newtonsoft.Json.xml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\AccessiblePropertyGrid.baml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\BackpackView.baml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\BankView.baml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\CurrencyOnHandView.baml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BackpackItemView.g.cs
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\BackpackView.g.cs
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BackpackWeaponView.g.cs
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\BankView.g.cs
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\CurrencyOnHandView.g.cs
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BaseItemView.g.cs
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\ShellView.g.cs
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\GeneralView.g.cs
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BaseWeaponView.g.cs
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\App.g.cs
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit_MarkupCompile.cache
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit_MarkupCompile.lref
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\App.baml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BackpackItemView.baml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BackpackWeaponView.baml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BaseItemView.baml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\ShellView.baml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Tabs\GeneralView.baml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Items\BaseWeaponView.baml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.g.resources
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.Properties.Resources.resources
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.csproj.GenerateResource.Cache
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.exe
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.SaveEdit.exe.manifest
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\bin\Release\Gibbed.Borderlands2.SaveEdit.application
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.exe.manifest
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit.application
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\Gibbed.Borderlands2.SaveEdit_Content.g.cs

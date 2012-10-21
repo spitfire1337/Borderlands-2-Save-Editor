@@ -1,7 +1,4 @@
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\NDesk.Options\bin\Release\NDesk.Options.dll
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\NDesk.Options\obj\Release\NDesk.Options.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\NDesk.Options\bin\Release\NDesk.Options.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2_rev88\trunk\NDesk.Options\obj\Release\NDesk.Options.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\NDesk.Options\bin\Release\NDesk.Options.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\NDesk.Options\obj\Release\NDesk.Options.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\fall back for mods\trunk\NDesk.Options\obj\Release\NDesk.Options.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\NDesk.Options\bin\Release\NDesk.Options.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\NDesk.Options\obj\Release\NDesk.Options.dll

@@ -20,6 +20,7 @@
  *    distribution.
  */
 
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
@@ -56,12 +57,13 @@ namespace Gibbed.Borderlands2.SaveEdit
         private string _CharacterName = "Zer0";
         private string _SelectedHead;
         private string _SelectedSkin;
+
         ///////////////////////////////////////////
         //SPITFIRE1337 MODS
         ///////////////////////////////////////////
         private string _Profileid;
         private string _ProfileName;
-        
+
 
         ///////////////////////////////////////////
         //END SPITFIRE1337 MODS
@@ -180,7 +182,6 @@ namespace Gibbed.Borderlands2.SaveEdit
         public ObservableCollection<AssetDisplay> PlayerClasses { get; private set; }
         public ObservableCollection<AssetDisplay> HeadAssets { get; private set; }
         public ObservableCollection<AssetDisplay> SkinAssets { get; private set; }
-       // public ObservableCollection<AssetDisplay> myprofiles { get; private set; }
 
         ///////////////////////////////////////////
         //SPITFIRE1337 MODS
@@ -240,7 +241,6 @@ namespace Gibbed.Borderlands2.SaveEdit
         [ImportingConstructor]
         public GeneralViewModel()
         {
-           
             this.Endians = new ObservableCollection<EndianDisplay>
             {
                 new EndianDisplay("Little (PC)", Endian.Little),
@@ -362,6 +362,27 @@ namespace Gibbed.Borderlands2.SaveEdit
             skinAssets.ForEach(a => this.SkinAssets.Add(a));
             this.SelectedSkin = selectedSkin;
         }
+
+        public void SynchronizeExpLevel()
+        {
+            this.ExpLevel = Experience.GetLevelForPoints(this.ExpPoints);
+        }
+
+        public void SynchronizeExpPoints()
+        {
+            var minimum = Experience.GetPointsForLevel(this.ExpLevel + 0);
+            var maximum = Experience.GetPointsForLevel(this.ExpLevel + 1) - 1;
+
+            if (this.ExpPoints < minimum)
+            {
+                this.ExpPoints = minimum;
+            }
+            else if (this.ExpPoints > maximum)
+            {
+                this.ExpPoints = maximum;
+            }
+        }
+
         ///////////////////////////////////////////
         //SPITFIRE1337 MODS
         ///////////////////////////////////////////
@@ -369,20 +390,35 @@ namespace Gibbed.Borderlands2.SaveEdit
         {
             this.Endian = endian;
             this.SaveGameId = saveGame.SaveGameId;
-            this.PlayerClass = saveGame.PlayerClassDefinition;
-            this.ExpLevel = saveGame.ExpLevel;
-            this.ExpPoints = saveGame.ExpPoints;
+            this.PlayerClass = saveGame.PlayerClass;
+
+            var expLevel = saveGame.ExpLevel;
+            var expPoints = saveGame.ExpPoints;
+
+            if (expPoints < 0)
+            {
+                expPoints = 0;
+            }
+
+            if (expLevel <= 0)
+            {
+                expLevel = Math.Max(1, Experience.GetLevelForPoints(expPoints));
+            }
+
+            this.ExpLevel = expLevel;
+            this.ExpPoints = expPoints;
             this.GeneralSkillPoints = saveGame.GeneralSkillPoints;
             this.SpecialistSkillPoints = saveGame.SpecialistSkillPoints;
             this.CharacterName = Encoding.UTF8.GetString(saveGame.UIPreferences.CharacterName);
             this.SelectedHead = saveGame.AppliedCustomizations[0];
             this.SelectedSkin = saveGame.AppliedCustomizations[4];
             this.BuildCustomizationAssets();
-            
+
             string vOut = myprofileid.ToString();
             this.Profileid = vOut;
             this.ProfileName = checkProfile(myprofileid);
         }
+
         public string checkProfile(string myid)
         {
             string name = "Unknown";
@@ -411,7 +447,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                                     if (reader.NodeType == XmlNodeType.Text)
                                     {
                                         name = reader.Value;
-                                       
+
                                     }
                                 }
                                 reader.Read();
@@ -456,25 +492,25 @@ namespace Gibbed.Borderlands2.SaveEdit
                 {
                     DJsIO io = new DJsIO(dialog.FileName, DJFileMode.Open, true);
 
-                   
+
                     io.Position = 0x371;
                     this.Profileid = io.ReadHexString(8);
                     io.Close();
 
                     //xPackage3.STFS.Package sts = new xPackage3.STFS.Package(dialog.FileName);
-                    
+
                     STFSPackage stfs = new STFSPackage(dialog.FileName, null);
                     ProfilePackage xFile = new ProfilePackage(ref stfs);
                     string gamertag = xFile.UserFile.GetGamertag();
-                    this.ProfileName = gamertag; 
+                    this.ProfileName = gamertag;
                     xFile.CloseIO();
                     stfs.CloseIO();
                     //this.Profileid = stfs.Header.Title_Package;
                 }
-                catch (Exception e) {  }
+                catch (Exception e) { }
             }
         }
-        
+
         public void saveprofiles()
         {
 
@@ -567,7 +603,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                         XmlNode node = doc.SelectSingleNode("//root");
                         node.AppendChild(gameElement);
                         doc.Save(path + "/profiles.xml");
-                        
+
                     }
                 }
                 catch (Exception e)
@@ -583,7 +619,7 @@ namespace Gibbed.Borderlands2.SaveEdit
         {
             endian = this.Endian;
             saveGame.SaveGameId = this.SaveGameId;
-            saveGame.PlayerClassDefinition = this.PlayerClass;
+            saveGame.PlayerClass = this.PlayerClass;
             saveGame.ExpLevel = this.ExpLevel;
             saveGame.ExpPoints = this.ExpPoints;
             saveGame.GeneralSkillPoints = this.GeneralSkillPoints;

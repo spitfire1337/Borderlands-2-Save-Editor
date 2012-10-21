@@ -125,7 +125,11 @@ namespace Gibbed.Borderlands2.SaveEdit
             {
                 Title = this._Title,
                 Filter = this._Filters.CreateFilterExpression(),
+                /////////////////////////////////////////////////
+                //Spitfire mods
                 //InitialDirectory = this._InitialDirectory,
+                //End Spitfire mods
+                /////////////////////////////////////////////////
                 Multiselect = this._AllowMultipleFiles,
                 CheckFileExists = true,
                 CheckPathExists = true,
