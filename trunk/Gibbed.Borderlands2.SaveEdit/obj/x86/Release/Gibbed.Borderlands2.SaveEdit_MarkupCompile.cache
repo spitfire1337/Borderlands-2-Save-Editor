@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\Gibbed.Borderlands2.SaveEdit\obj\x86\Release\
 Gibbed.Borderlands2.SaveEdit
 none
 false
 TRACE
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.SaveEdit\App.xaml
-10-1847072358
-3-1528034288
-45-131124417
-26222539220
-Items\BackpackItemView.xaml;AccessiblePropertyGrid.xaml;Tabs\BackpackView.xaml;Items\BackpackWeaponView.xaml;Tabs\BankView.xaml;Tabs\CurrencyOnHandView.xaml;Items\BaseItemView.xaml;ShellView.xaml;Tabs\GeneralView.xaml;Items\BaseWeaponView.xaml;
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\Gibbed.Borderlands2.SaveEdit\App.xaml
+11-1789044683
+21068515605
+46952662325
+25857072383
+Items\BackpackItemView.xaml;AccessiblePropertyGrid.xaml;Tabs\BackpackView.xaml;Items\BackpackWeaponView.xaml;Tabs\BankView.xaml;Tabs\CurrencyOnHandView.xaml;Items\BaseItemView.xaml;ShellView.xaml;Tabs\FastTravelView.xaml;Tabs\GeneralView.xaml;Items\BaseWeaponView.xaml;
 
 False
 

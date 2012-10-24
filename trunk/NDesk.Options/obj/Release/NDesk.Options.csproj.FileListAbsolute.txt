@@ -1,4 +1,4 @@
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\NDesk.Options\bin\Release\NDesk.Options.dll
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\NDesk.Options\obj\Release\NDesk.Options.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\NDesk.Options\bin\Release\NDesk.Options.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\NDesk.Options\obj\Release\NDesk.Options.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\NDesk.Options\bin\Release\NDesk.Options.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\NDesk.Options\obj\Release\NDesk.Options.dll

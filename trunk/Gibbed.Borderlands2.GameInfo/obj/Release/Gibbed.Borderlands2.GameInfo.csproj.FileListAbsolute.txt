@@ -4,10 +4,10 @@ C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbe
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.GameInfo\bin\Release\Newtonsoft.Json.xml
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.GameInfo\obj\Release\Gibbed.Borderlands2.GameInfo.dll
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Gibbed.Borderlands2.GameInfo\obj\Release\Gibbed.Borderlands2.GameInfo.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.GameInfo\bin\Release\Gibbed.Borderlands2.GameInfo.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.GameInfo\bin\Release\Gibbed.Borderlands2.GameInfo.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.GameInfo\bin\Release\Newtonsoft.Json.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.GameInfo\bin\Release\Newtonsoft.Json.xml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.GameInfo\obj\Release\Gibbed.Borderlands2.GameInfo.csprojResolveAssemblyReference.cache
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.GameInfo\obj\Release\Gibbed.Borderlands2.GameInfo.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\Gibbed.Borderlands2.GameInfo\obj\Release\Gibbed.Borderlands2.GameInfo.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\Gibbed.Borderlands2.GameInfo\bin\Release\Gibbed.Borderlands2.GameInfo.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\Gibbed.Borderlands2.GameInfo\bin\Release\Gibbed.Borderlands2.GameInfo.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\Gibbed.Borderlands2.GameInfo\bin\Release\Newtonsoft.Json.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\Gibbed.Borderlands2.GameInfo\bin\Release\Newtonsoft.Json.xml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\Gibbed.Borderlands2.GameInfo\obj\Release\Gibbed.Borderlands2.GameInfo.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\Gibbed.Borderlands2.GameInfo\obj\Release\Gibbed.Borderlands2.GameInfo.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\Gibbed.Borderlands2.GameInfo\obj\Release\Gibbed.Borderlands2.GameInfo.pdb

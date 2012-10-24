@@ -31,10 +31,11 @@ namespace Gibbed.Borderlands2.GameInfo
         }
 
         public string ResourcePath { get; internal set; }
+        public string ResourceName { get; internal set; }
         public string LevelName { get; internal set; }
         public DownloadableContentDefinition DLCExpansion { get; internal set; }
         public TravelStationDefinition PreviousStation { get; set; }
-        public string DisplayName { get; set; }
+        public string StationDisplayName { get; set; }
         public List<MissionStatusData> MissionDependencies { get; set; }
     }
 }

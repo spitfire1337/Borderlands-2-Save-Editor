@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("gibbed.borderlands2.gameinfo.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("lzo_32.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("lzo_64.dll")]
 

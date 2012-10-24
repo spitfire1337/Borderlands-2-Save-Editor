@@ -35,6 +35,9 @@ namespace Gibbed.Borderlands2.GameInfo.Raw
             this.MissionDependencies = new List<MissionStatusData>();
         }
 
+        [JsonProperty(PropertyName = "resource_name", Required = Required.Always)]
+        public string ResourceName { get; set; }
+
         [JsonProperty(PropertyName = "level_name")]
         public string LevelName { get; set; }
 
@@ -44,8 +47,8 @@ namespace Gibbed.Borderlands2.GameInfo.Raw
         [JsonProperty(PropertyName = "previous_station")]
         public string PreviousStation { get; set; }
 
-        [JsonProperty(PropertyName = "display_name")]
-        public string DisplayName { get; set; }
+        [JsonProperty(PropertyName = "station_display_name")]
+        public string StationDisplayName { get; set; }
 
         [JsonProperty(PropertyName = "mission_dependencies")]
         public List<MissionStatusData> MissionDependencies { get; set; }
