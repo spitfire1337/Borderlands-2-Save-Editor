@@ -29,14 +29,11 @@ namespace Gibbed.Borderlands2.GameInfo
         public static AssetLibraryManager AssetLibraryManager { get; private set; }
         public static InfoDictionary<PlayerClassDefinition> PlayerClasses { get; private set; }
         public static InfoDictionary<WeaponTypeDefinition> WeaponTypes { get; private set; }
-        public static InfoDictionary<WeaponNamePartDefinition> WeaponNameParts { get; private set; }
-        public static InfoDictionary<WeaponBalanceDefinition> WeaponBalance { get; private set; }
         public static InfoDictionary<ItemTypeDefinition> ItemTypes { get; private set; }
-        public static InfoDictionary<ItemNamePartDefinition> ItemNameParts { get; private set; }
+        public static InfoDictionary<WeaponBalanceDefinition> WeaponBalance { get; private set; }
         public static InfoDictionary<ItemBalanceDefinition> ItemBalance { get; private set; }
         public static InfoDictionary<CustomizationDefinition> Customizations { get; private set; }
         public static InfoDictionary<TravelStationDefinition> TravelStations { get; private set; }
-        public static InfoDictionary<FastTravelStationOrdering> FastTravelStationOrdering { get; private set; }
 
         static InfoManager()
         {
@@ -46,17 +43,13 @@ namespace Gibbed.Borderlands2.GameInfo
             PlayerClasses = Loaders.PlayerClassDefinitionLoader.Load(DownloadableContents);
 
             WeaponTypes = Loaders.WeaponTypeDefinitionLoader.Load();
-            WeaponNameParts = Loaders.WeaponNamePartDefinitionLoader.Load();
-            WeaponBalance = Loaders.WeaponBalanceDefinitionLoader.Load(WeaponTypes);
-
             ItemTypes = Loaders.ItemTypeDefinitionLoader.Load();
-            ItemNameParts = Loaders.ItemNamePartDefinitionLoader.Load();
-            ItemBalance = Loaders.ItemBalanceDefinitionLoader.Load(ItemTypes);
 
+            WeaponBalance = Loaders.WeaponBalanceDefinitionLoader.Load(WeaponTypes);
+            ItemBalance = Loaders.ItemBalanceDefinitionLoader.Load(ItemTypes);
             Customizations = Loaders.CustomizationDefinitionLoader.Load(DownloadableContents);
 
             TravelStations = Loaders.TravelStationDefinitionLoader.Load(DownloadableContents);
-            FastTravelStationOrdering = Loaders.FastTravelStationOrderingLoader.Load(TravelStations, DownloadableContents);
         }
 
         // Just a way to get the static initializer called.

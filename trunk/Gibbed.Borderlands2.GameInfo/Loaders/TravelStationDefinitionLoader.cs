@@ -42,25 +42,11 @@ namespace Gibbed.Borderlands2.GameInfo.Loaders
                 {
                     if (defs.ContainsKey(kv.Value.PreviousStation) == false)
                     {
-                        throw ResourceNotFoundException.Create("travel station", kv.Value.PreviousStation);
+                        throw new KeyNotFoundException("could not find travel station '" + kv.Value.PreviousStation +
+                                                       "'");
                     }
+
                     defs[kv.Key].PreviousStation = defs[kv.Value.PreviousStation];
-                }
-                foreach (var kv in raws
-                    .Where(
-                        kv =>
-                        (kv.Value is Raw.LevelTravelStationDefinition) &&
-                        string.IsNullOrEmpty(((Raw.LevelTravelStationDefinition)kv.Value).DestinationStation) == false))
-                {
-                    var rawLevelTravelStation = (Raw.LevelTravelStationDefinition)kv.Value;
-                    if (defs.ContainsKey(rawLevelTravelStation.DestinationStation) == false)
-                    {
-                        throw ResourceNotFoundException.Create("level travel station",
-                                                               rawLevelTravelStation.DestinationStation);
-                    }
-                    var levelTravelStation = (LevelTravelStationDefinition)defs[kv.Key];
-                    levelTravelStation.DestinationStation =
-                        (LevelTravelStationDefinition)defs[rawLevelTravelStation.DestinationStation];
                 }
                 return defs;
             }
@@ -79,7 +65,7 @@ namespace Gibbed.Borderlands2.GameInfo.Loaders
             {
                 if (downloadableContents.ContainsKey(kv.Value.DLCExpansion) == false)
                 {
-                    throw ResourceNotFoundException.Create("downloadable content", kv.Value.DLCExpansion);
+                    throw new KeyNotFoundException("could not find downloadable content '" + kv.Value.DLCExpansion + "'");
                 }
                 dlcExpansion = downloadableContents[kv.Value.DLCExpansion];
             }
@@ -105,10 +91,9 @@ namespace Gibbed.Borderlands2.GameInfo.Loaders
             return new FastTravelStationDefinition()
             {
                 ResourcePath = kv.Key,
-                ResourceName = raw.ResourceName,
                 LevelName = raw.LevelName,
                 DLCExpansion = dlcExpansion,
-                StationDisplayName = raw.StationDisplayName,
+                DisplayName = raw.DisplayName,
                 MissionDependencies = GetMissionStatusData(raw.MissionDependencies),
                 InitiallyActive = raw.InitiallyActive,
                 SendOnly = raw.SendOnly,
@@ -127,10 +112,9 @@ namespace Gibbed.Borderlands2.GameInfo.Loaders
             return new LevelTravelStationDefinition()
             {
                 ResourcePath = kv.Key,
-                ResourceName = raw.ResourceName,
                 LevelName = raw.LevelName,
                 DLCExpansion = dlcExpansion,
-                StationDisplayName = raw.StationDisplayName,
+                DisplayName = raw.DisplayName,
                 MissionDependencies = GetMissionStatusData(kv.Value.MissionDependencies),
             };
         }

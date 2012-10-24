@@ -32,17 +32,18 @@ namespace Gibbed.Borderlands2.GameInfo.Loaders
         {
             try
             {
-                var raws = LoaderHelper
-                    .DeserializeJson<Dictionary<string, Raw.ItemBalanceDefinition>>("Item Balance");
-                var defs = new InfoDictionary<ItemBalanceDefinition>(
-                    raws.ToDictionary(kv => kv.Key,
-                                      kv => GetItemBalanceDefinition(itemTypes, kv)));
+                var raws = LoaderHelper.DeserializeJson<Dictionary<string, Raw.ItemBalanceDefinition>>("Item Balance");
+                var defs =
+                    new InfoDictionary<ItemBalanceDefinition>(raws.ToDictionary(kv => kv.Key,
+                                                                                kv =>
+                                                                                GetItemBalanceDefinition(itemTypes, kv)));
                 foreach (var kv in raws.Where(kv => string.IsNullOrEmpty(kv.Value.Base) == false))
                 {
                     if (defs.ContainsKey(kv.Value.Base) == false)
                     {
-                        throw ResourceNotFoundException.Create("item balance", kv.Value.Base);
+                        throw new KeyNotFoundException("could not find item balance '" + kv.Value.Base + "'");
                     }
+
                     defs[kv.Key].Base = defs[kv.Value.Base];
                 }
                 return defs;
@@ -75,7 +76,7 @@ namespace Gibbed.Borderlands2.GameInfo.Loaders
 
             if (itemTypes.ContainsKey(type) == false)
             {
-                throw ResourceNotFoundException.Create("item type", type);
+                throw new KeyNotFoundException("could not find item type '" + type + "'");
             }
 
             return itemTypes[type];
@@ -103,7 +104,7 @@ namespace Gibbed.Borderlands2.GameInfo.Loaders
             {
                 if (itemTypes.ContainsKey(t) == false)
                 {
-                    throw ResourceNotFoundException.Create("item type", t);
+                    throw new KeyNotFoundException("could not find item type '" + t + "'");
                 }
 
                 return itemTypes[t];
@@ -123,7 +124,7 @@ namespace Gibbed.Borderlands2.GameInfo.Loaders
             {
                 if (itemTypes.ContainsKey(raw.Type) == false)
                 {
-                    throw ResourceNotFoundException.Create("item type", raw.Type);
+                    throw new KeyNotFoundException("could not find item type " + raw.Type);
                 }
 
                 type = itemTypes[raw.Type];

@@ -49,7 +49,6 @@ namespace Gibbed.Borderlands2.SaveEdit
         private CurrencyOnHandViewModel _CurrencyOnHand;
         private BackpackViewModel _Backpack;
         private BankViewModel _Bank;
-        private FastTravelViewModel _FastTravel;
         #endregion
 
         #region Properties
@@ -113,18 +112,6 @@ namespace Gibbed.Borderlands2.SaveEdit
                 this.NotifyOfPropertyChange(() => this.Bank);
             }
         }
-
-        [Import(typeof(FastTravelViewModel))]
-        public FastTravelViewModel FastTravel
-        {
-            get { return this._FastTravel; }
-
-            set
-            {
-                this._FastTravel = value;
-                this.NotifyOfPropertyChange(() => this.FastTravel);
-            }
-        }
         #endregion
 
         [ImportingConstructor]
@@ -170,6 +157,7 @@ namespace Gibbed.Borderlands2.SaveEdit
             {
                 yield break;
             }
+
             ///////////////////////////////////////////
             //SPITFIRE1337 MODS
             ///////////////////////////////////////////
@@ -242,21 +230,20 @@ namespace Gibbed.Borderlands2.SaveEdit
                 deviceid = "0";
                 consoleid = "0";
             }
-            FileFormats.SaveFile saveFile = null;
 
             yield return new DelegateResult(() =>
             {
+                FileFormats.SaveFile saveFile;
                 using (var input = File.OpenRead(fileName))
                 {
                     saveFile = FileFormats.SaveFile.Deserialize(input, FileFormats.SaveFile.DeserializeSettings.None);
                 }
 
-                this.General.ImportData(saveFile.SaveGame, saveFile.Endian,profileid,deviceid,consoleid);
+                this.SaveFile = saveFile;
+                this.General.ImportData(saveFile.SaveGame, saveFile.Endian, profileid, deviceid, consoleid);
                 this.CurrencyOnHand.ImportData(saveFile.SaveGame);
                 this.Backpack.ImportData(saveFile.SaveGame);
                 this.Bank.ImportData(saveFile.SaveGame);
-                this.FastTravel.ImportData(saveFile.SaveGame);
-                this.SaveFile = saveFile;
             })
                 .Rescue<DllNotFoundException>().Execute(
                     x => new MyMessageBox("Failed to load save: " + x.Message, "Error")
@@ -272,18 +259,9 @@ namespace Gibbed.Borderlands2.SaveEdit
                     new MyMessageBox("An exception was thrown (press Ctrl+C to copy):\n\n" + x.ToString(),
                                      "Error")
                         .WithIcon(MessageBoxImage.Error).AsCoroutine());
-
-
-            if (saveFile != null &&
-                saveFile.SaveGame.IsBadassModeSaveGame == true)
-            {
-                saveFile.SaveGame.IsBadassModeSaveGame = false;
-                yield return
-                    new MyMessageBox("Your save file was set as 'Badass Mode', and this has now been cleared.\n\n" +
-                                     "See http://bit.ly/graveyardsav for more details.",
-                                     "Information")
-                        .WithIcon(MessageBoxImage.Information);
-            }
+            ///////////////////////////////////////////
+            //END SPITFIRE1337 MODS
+            ///////////////////////////////////////////
         }
 
         public IEnumerable<IResult> WriteSave()
@@ -327,7 +305,6 @@ namespace Gibbed.Borderlands2.SaveEdit
                 this.CurrencyOnHand.ExportData(saveFile.SaveGame);
                 this.Backpack.ExportData(saveFile.SaveGame);
                 this.Bank.ExportData(saveFile.SaveGame);
-                this.FastTravel.ExportData(saveFile.SaveGame);
 
                 using (var output = File.Create(fileName))
                 {
@@ -352,10 +329,8 @@ namespace Gibbed.Borderlands2.SaveEdit
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             File.Delete(path + "/savegame.sav");
 
-            //MessageBox.Show("");
-            System.Windows.Forms.MessageBox.Show("The new save will appear as a Level 200 Zero on your xbox/modio etc. Load the save in game and it will correct itself. This is not a glitch and is by design.", "NOTICE!",
-System.Windows.Forms.MessageBoxButtons.OKCancel,
-System.Windows.Forms.MessageBoxIcon.Exclamation);
+            //MessageBox.Show("A save file box will now appear, please select a EXISTING XBOX SAVE to overwrite. I can not emphasize this enough, ALWAYS KEEP A WORKING BACKUP. Once you have a backup press ok to continue");
+
             var saveFile = this.SaveFile;
 
             yield return new DelegateResult(() =>
@@ -483,10 +458,10 @@ System.Windows.Forms.MessageBoxIcon.Exclamation);
                 File.WriteAllBytes(path + "/savegame.sav", Properties.Resources.Assassin);
             }
             fileName = path + "/savegame.sav";
-            FileFormats.SaveFile saveFile = null;
+
             yield return new DelegateResult(() =>
             {
-                //FileFormats.SaveFile saveFile;
+                FileFormats.SaveFile saveFile;
                 using (var input = File.OpenRead(fileName))
                 {
                     saveFile = FileFormats.SaveFile.Deserialize(input, FileFormats.SaveFile.DeserializeSettings.None);
@@ -530,10 +505,10 @@ System.Windows.Forms.MessageBoxIcon.Exclamation);
                 File.WriteAllBytes(path + "/savegame.sav", Properties.Resources.Siren);
             }
             fileName = path + "/savegame.sav";
-            FileFormats.SaveFile saveFile = null;
+
             yield return new DelegateResult(() =>
             {
-                //FileFormats.SaveFile saveFile;
+                FileFormats.SaveFile saveFile;
                 using (var input = File.OpenRead(fileName))
                 {
                     saveFile = FileFormats.SaveFile.Deserialize(input, FileFormats.SaveFile.DeserializeSettings.None);
@@ -577,10 +552,10 @@ System.Windows.Forms.MessageBoxIcon.Exclamation);
                 File.WriteAllBytes(path + "/savegame.sav", Properties.Resources.Gunzerker);
             }
             fileName = path + "/savegame.sav";
-            FileFormats.SaveFile saveFile = null;
+
             yield return new DelegateResult(() =>
             {
-                //FileFormats.SaveFile saveFile;
+                FileFormats.SaveFile saveFile;
                 using (var input = File.OpenRead(fileName))
                 {
                     saveFile = FileFormats.SaveFile.Deserialize(input, FileFormats.SaveFile.DeserializeSettings.None);
@@ -624,10 +599,10 @@ System.Windows.Forms.MessageBoxIcon.Exclamation);
                 File.WriteAllBytes(path + "/savegame.sav", Properties.Resources.Commando);
             }
             fileName = path + "/savegame.sav";
-            FileFormats.SaveFile saveFile = null;
+
             yield return new DelegateResult(() =>
             {
-                // FileFormats.SaveFile saveFile;
+                FileFormats.SaveFile saveFile;
                 using (var input = File.OpenRead(fileName))
                 {
                     saveFile = FileFormats.SaveFile.Deserialize(input, FileFormats.SaveFile.DeserializeSettings.None);
@@ -671,10 +646,10 @@ System.Windows.Forms.MessageBoxIcon.Exclamation);
                 File.WriteAllBytes(path + "/savegame.sav", Properties.Resources.Mechromancer);
             }
             fileName = path + "/savegame.sav";
-            FileFormats.SaveFile saveFile = null;
+
             yield return new DelegateResult(() =>
             {
-                //FileFormats.SaveFile saveFile;
+                FileFormats.SaveFile saveFile;
                 using (var input = File.OpenRead(fileName))
                 {
                     saveFile = FileFormats.SaveFile.Deserialize(input, FileFormats.SaveFile.DeserializeSettings.None);
@@ -720,10 +695,9 @@ System.Windows.Forms.MessageBoxIcon.Exclamation);
             }
             fileName = path + "/savegame.sav";
 
-            FileFormats.SaveFile saveFile = null;
             yield return new DelegateResult(() =>
             {
-                //FileFormats.SaveFile saveFile;
+                FileFormats.SaveFile saveFile;
                 using (var input = File.OpenRead(fileName))
                 {
                     saveFile = FileFormats.SaveFile.Deserialize(input, FileFormats.SaveFile.DeserializeSettings.None);
@@ -767,10 +741,10 @@ System.Windows.Forms.MessageBoxIcon.Exclamation);
                 File.WriteAllBytes(path + "/savegame.sav", Properties.Resources.Siren_360);
             }
             fileName = path + "/savegame.sav";
-            FileFormats.SaveFile saveFile = null;
+
             yield return new DelegateResult(() =>
             {
-                //FileFormats.SaveFile saveFile;
+                FileFormats.SaveFile saveFile;
                 using (var input = File.OpenRead(fileName))
                 {
                     saveFile = FileFormats.SaveFile.Deserialize(input, FileFormats.SaveFile.DeserializeSettings.None);
@@ -814,10 +788,10 @@ System.Windows.Forms.MessageBoxIcon.Exclamation);
                 File.WriteAllBytes(path + "/savegame.sav", Properties.Resources.Gunzerker_360);
             }
             fileName = path + "/savegame.sav";
-            FileFormats.SaveFile saveFile = null;
+
             yield return new DelegateResult(() =>
             {
-                //FileFormats.SaveFile saveFile;
+                FileFormats.SaveFile saveFile;
                 using (var input = File.OpenRead(fileName))
                 {
                     saveFile = FileFormats.SaveFile.Deserialize(input, FileFormats.SaveFile.DeserializeSettings.None);
@@ -861,10 +835,10 @@ System.Windows.Forms.MessageBoxIcon.Exclamation);
                 File.WriteAllBytes(path + "/savegame.sav", Properties.Resources.Commando_360);
             }
             fileName = path + "/savegame.sav";
-            FileFormats.SaveFile saveFile = null;
+
             yield return new DelegateResult(() =>
             {
-                //FileFormats.SaveFile saveFile;
+                FileFormats.SaveFile saveFile;
                 using (var input = File.OpenRead(fileName))
                 {
                     saveFile = FileFormats.SaveFile.Deserialize(input, FileFormats.SaveFile.DeserializeSettings.None);
@@ -908,10 +882,10 @@ System.Windows.Forms.MessageBoxIcon.Exclamation);
                 File.WriteAllBytes(path + "/savegame.sav", Properties.Resources.Mechromancer_360);
             }
             fileName = path + "/savegame.sav";
-            FileFormats.SaveFile saveFile = null;
+
             yield return new DelegateResult(() =>
             {
-                //FileFormats.SaveFile saveFile;
+                FileFormats.SaveFile saveFile;
                 using (var input = File.OpenRead(fileName))
                 {
                     saveFile = FileFormats.SaveFile.Deserialize(input, FileFormats.SaveFile.DeserializeSettings.None);

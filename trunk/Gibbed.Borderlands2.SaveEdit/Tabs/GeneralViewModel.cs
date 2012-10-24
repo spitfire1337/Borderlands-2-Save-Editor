@@ -57,6 +57,7 @@ namespace Gibbed.Borderlands2.SaveEdit
         private string _CharacterName = "Zer0";
         private string _SelectedHead;
         private string _SelectedSkin;
+
         ///////////////////////////////////////////
         //SPITFIRE1337 MODS
         ///////////////////////////////////////////
@@ -181,6 +182,7 @@ namespace Gibbed.Borderlands2.SaveEdit
         public ObservableCollection<AssetDisplay> PlayerClasses { get; private set; }
         public ObservableCollection<AssetDisplay> HeadAssets { get; private set; }
         public ObservableCollection<AssetDisplay> SkinAssets { get; private set; }
+
         ///////////////////////////////////////////
         //SPITFIRE1337 MODS
         ///////////////////////////////////////////
@@ -380,6 +382,7 @@ namespace Gibbed.Borderlands2.SaveEdit
                 this.ExpPoints = maximum;
             }
         }
+
         ///////////////////////////////////////////
         //SPITFIRE1337 MODS
         ///////////////////////////////////////////
@@ -410,10 +413,12 @@ namespace Gibbed.Borderlands2.SaveEdit
             this.SelectedHead = saveGame.AppliedCustomizations[0];
             this.SelectedSkin = saveGame.AppliedCustomizations[4];
             this.BuildCustomizationAssets();
+
             string vOut = myprofileid.ToString();
             this.Profileid = vOut;
             this.ProfileName = checkProfile(myprofileid);
         }
+
         public string checkProfile(string myid)
         {
             string name = "Unknown";

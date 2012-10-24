@@ -133,9 +133,8 @@ namespace Gibbed.Borderlands2.GameInfo
             if (merged.Type != itemType &&
                 merged.Types.Contains(itemType) == false)
             {
-                throw new ResourceNotFoundException(string.Format("item type '{0}' is not valid for '{1}'",
-                                                                  itemType.ResourcePath,
-                                                                  this.ResourcePath));
+                throw new KeyNotFoundException("item type '" + itemType.ResourcePath + "' not valid for '" +
+                                               this.ResourcePath + "'");
             }
 
             return merged;

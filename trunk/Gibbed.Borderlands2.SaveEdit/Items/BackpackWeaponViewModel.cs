@@ -64,6 +64,11 @@ namespace Gibbed.Borderlands2.SaveEdit
         #endregion
 
         #region Display Properties
+        public override string DisplayName
+        {
+            get { return "Backpack Weapon"; }
+        }
+
         public override string DisplayGroup
         {
             get

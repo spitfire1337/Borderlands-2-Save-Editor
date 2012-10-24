@@ -27,8 +27,5 @@ namespace Gibbed.Borderlands2.GameInfo
         internal LevelTravelStationDefinition()
         {
         }
-
-        public string DisplayName { get; internal set; }
-        public LevelTravelStationDefinition DestinationStation { get; internal set; }
     }
 }

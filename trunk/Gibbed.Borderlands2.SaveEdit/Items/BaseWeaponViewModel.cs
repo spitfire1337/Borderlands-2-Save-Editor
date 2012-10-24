@@ -32,7 +32,6 @@ namespace Gibbed.Borderlands2.SaveEdit
     internal class BaseWeaponViewModel : PropertyChangedBase, IBaseSlotViewModel
     {
         private readonly BaseWeapon _Weapon;
-        private string _DisplayName;
 
         public IBaseSlot BaseSlot
         {
@@ -53,40 +52,6 @@ namespace Gibbed.Borderlands2.SaveEdit
                     InfoManager.WeaponBalance.Items.Where(kv => kv.Value.Type != null).Select(
                         kv => kv.Value.Type.ResourcePath).Distinct().OrderBy(s => s));
             this.BuildBalanceAssets();
-            this.UpdateDisplayName();
-        }
-
-        private static string GenerateDisplayName(string type, string prefixPart, string titlePart)
-        {
-            if (titlePart != "None" &&
-                InfoManager.WeaponNameParts.ContainsKey(titlePart) == true &&
-                string.IsNullOrEmpty(InfoManager.WeaponNameParts[titlePart].Name) == false)
-            {
-                var text = InfoManager.WeaponNameParts[titlePart].Name;
-
-                if (prefixPart != "None" &&
-                    InfoManager.WeaponNameParts.ContainsKey(prefixPart) == true &&
-                    string.IsNullOrEmpty(InfoManager.WeaponNameParts[prefixPart].Name) == false)
-                {
-                    text = InfoManager.WeaponNameParts[prefixPart].Name + " " + text;
-                }
-
-                return text;
-            }
-
-            if (type != "None" &&
-                InfoManager.WeaponTypes.ContainsKey(type) == true &&
-                string.IsNullOrEmpty(InfoManager.WeaponTypes[type].Name) == false)
-            {
-                return InfoManager.WeaponTypes[type].Name;
-            }
-
-            return "Unknown Weapon";
-        }
-
-        private void UpdateDisplayName()
-        {
-            this.DisplayName = GenerateDisplayName(this.Type, this.PrefixPart, this.TitlePart);
         }
 
         #region Properties
@@ -98,7 +63,6 @@ namespace Gibbed.Borderlands2.SaveEdit
                 this._Weapon.Type = value;
                 this.NotifyOfPropertyChange(() => this.Type);
                 this.BuildBalanceAssets();
-                this.UpdateDisplayName();
             }
         }
 
@@ -230,7 +194,6 @@ namespace Gibbed.Borderlands2.SaveEdit
             {
                 this._Weapon.PrefixPart = value;
                 this.NotifyOfPropertyChange(() => this.PrefixPart);
-                this.UpdateDisplayName();
             }
         }
 
@@ -241,7 +204,6 @@ namespace Gibbed.Borderlands2.SaveEdit
             {
                 this._Weapon.TitlePart = value;
                 this.NotifyOfPropertyChange(() => this.TitlePart);
-                this.UpdateDisplayName();
             }
         }
 
@@ -279,12 +241,7 @@ namespace Gibbed.Borderlands2.SaveEdit
         #region Display Properties
         public virtual string DisplayName
         {
-            get { return this._DisplayName; }
-            private set
-            {
-                this._DisplayName = value;
-                this.NotifyOfPropertyChange(() => this.DisplayName);
-            }
+            get { return "Base Weapon"; }
         }
 
         public virtual string DisplayGroup

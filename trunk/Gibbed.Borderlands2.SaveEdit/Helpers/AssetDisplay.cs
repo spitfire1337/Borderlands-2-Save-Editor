@@ -27,7 +27,6 @@ namespace Gibbed.Borderlands2.SaveEdit
         public string Name { get; private set; }
         public string Path { get; private set; }
         public string Group { get; private set; }
-        public bool Custom { get; private set; }
 
         public AssetDisplay(string name, string path)
         {
@@ -40,21 +39,6 @@ namespace Gibbed.Borderlands2.SaveEdit
             this.Name = name;
             this.Path = path;
             this.Group = group;
-        }
-
-        public AssetDisplay(string name, string path, bool custom)
-        {
-            this.Name = name;
-            this.Path = path;
-            this.Custom = custom;
-        }
-
-        public AssetDisplay(string name, string path, string group, bool custom)
-        {
-            this.Name = name;
-            this.Path = path;
-            this.Group = group;
-            this.Custom = custom;
         }
     }
 }

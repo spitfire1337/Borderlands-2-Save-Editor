@@ -24,7 +24,6 @@ using System;
 
 namespace Gibbed.Borderlands2.GameInfo
 {
-    [Serializable]
     public sealed class InfoLoadException : Exception
     {
         public InfoLoadException()

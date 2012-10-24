@@ -19,24 +19,24 @@ C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\Verif
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\VerifySaves\obj\x86\Release\VerifySaves.csprojResolveAssemblyReference.cache
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\VerifySaves\obj\x86\Release\VerifySaves.exe
 C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2\trunk\VerifySaves\obj\x86\Release\VerifySaves.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\lzo_32.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\lzo_64.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\VerifySaves.exe
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\VerifySaves.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\Gibbed.Borderlands2.FileFormats.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\Gibbed.Borderlands2.ProtoBufFormats.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\Gibbed.IO.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\NDesk.Options.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\protobuf-net.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\Gibbed.Borderlands2.GameInfo.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\Newtonsoft.Json.dll
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\Gibbed.Borderlands2.FileFormats.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\Gibbed.Borderlands2.ProtoBufFormats.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\Gibbed.IO.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\protobuf-net.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\protobuf-net.xml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\Gibbed.Borderlands2.GameInfo.pdb
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\bin\Release\Newtonsoft.Json.xml
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\obj\x86\Release\VerifySaves.csprojResolveAssemblyReference.cache
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\obj\x86\Release\VerifySaves.exe
-C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2 modded r113\trunk\VerifySaves\obj\x86\Release\VerifySaves.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\lzo_32.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\lzo_64.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\VerifySaves.exe
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\VerifySaves.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\Gibbed.Borderlands2.FileFormats.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\Gibbed.Borderlands2.ProtoBufFormats.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\Gibbed.IO.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\NDesk.Options.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\protobuf-net.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\Gibbed.Borderlands2.GameInfo.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\Newtonsoft.Json.dll
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\Gibbed.Borderlands2.FileFormats.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\Gibbed.Borderlands2.ProtoBufFormats.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\Gibbed.IO.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\protobuf-net.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\protobuf-net.xml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\Gibbed.Borderlands2.GameInfo.pdb
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\bin\Release\Newtonsoft.Json.xml
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\obj\x86\Release\VerifySaves.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\obj\x86\Release\VerifySaves.exe
+C:\Users\Mike\Documents\Borderlands 2 Stuff\save editor\borderlands2modified r92\trunk\VerifySaves\obj\x86\Release\VerifySaves.pdb
